@@ -19,6 +19,9 @@ apt-get install vim -y
 pip install tensorflow-gpu
 python3 -c "import tensorflow as tf;print('Your tensorflow version is:');print(tf.__version__);
 
+#install PIL
+pip install pillow
+
 echo ""
 echo "Please enter the jupyter notebook password"
 echo ""
