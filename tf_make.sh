@@ -17,7 +17,7 @@ apt-get install vim -y
 
 #install tensorflow gpu
 pip install tensorflow-gpu
-python3 -c "import tensorflow as tf;print('Your tensorflow version is:');print(tf.__version__);
+python3 -c "import tensorflow as tf;print('Your tensorflow version is:');print(tf.__version__);"
 
 #install PIL
 pip install pillow
