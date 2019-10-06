@@ -22,6 +22,10 @@ python3 -c "import tensorflow as tf;print('Your tensorflow version is:');print(t
 #install PIL
 pip install pillow
 
+#install wget
+apt-get update
+apt-get install wget
+
 echo ""
 echo "Please enter the jupyter notebook password"
 echo ""
