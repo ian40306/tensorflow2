@@ -19,12 +19,12 @@ apt-get install vim -y
 pip install tensorflow-gpu
 python3 -c "import tensorflow as tf;print('Your tensorflow version is:');print(tf.__version__);"
 
-#install PIL
-pip install pillow
+#install matplotlib PIL lxml pandas Cython opencv-python openpyxl
+pip install matplotlib pillow lxml pandas Cython opencv-python openpyxl
 
 #install wget
 apt-get update
-apt-get install wget
+apt-get install wget 
 
 echo ""
 echo "Please enter the jupyter notebook password"
