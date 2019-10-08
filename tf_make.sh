@@ -19,8 +19,8 @@ apt-get install vim -y
 pip install tensorflow-gpu
 python3 -c "import tensorflow as tf;print('Your tensorflow version is:');print(tf.__version__);"
 
-#install matplotlib PIL lxml pandas Cython opencv-python openpyxl
-pip install matplotlib pillow lxml pandas Cython opencv-python openpyxl
+#install matplotlib PIL lxml pandas Cython opencv-python scipy openpyxl
+pip install matplotlib pillow lxml pandas Cython opencv-python scipy openpyxl
 
 #install wget
 apt-get update
