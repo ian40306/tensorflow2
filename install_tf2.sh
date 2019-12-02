@@ -37,37 +37,20 @@ apt-get install -y --no-install-recommends \
         cuda-command-line-tools-$CUDA_PKG_VERSION \
 cuda-libraries-dev-$CUDA_PKG_VERSION \
         cuda-minimal-build-$CUDA_PKG_VERSION \
-        libnccl-dev=$NCCL_VERSION-1+cuda10.0 \
-export=LIBRARY_PATH /usr/local/cuda/lib64/stubs
+        libnccl-dev=$NCCL_VERSION-1+cuda10.0
 
-# devel/cudnn
+# cudnn7
+export CUDNN_VERSION=7.6.4.38
+
 apt-get install -y --no-install-recommends \
     libcudnn7=$CUDNN_VERSION-1+cuda10.0 \
 libcudnn7-dev=$CUDNN_VERSION-1+cuda10.0 \
 && \
     apt-mark hold libcudnn7
     
-export CUDA=10.0
-apt-get install -y --no-install-recommends \
-        build-essential \
-        cuda-command-line-tools-${CUDA/./-} \
-        cuda-cublas-dev-${CUDA/./-} \
-        cuda-cudart-dev-${CUDA/./-} \
-        cuda-cufft-dev-${CUDA/./-} \
-        cuda-curand-dev-${CUDA/./-} \
-        cuda-cusolver-dev-${CUDA/./-} \
-        cuda-cusparse-dev-${CUDA/./-} \
-        libcurl3-dev \
-        libfreetype6-dev \
-        libhdf5-serial-dev \
-        libzmq3-dev \
-        pkg-config \
-        rsync \
-        software-properties-common \
-        unzip \
-        zip \
-        zlib1g-dev \
-        wget \
-        git
-
+# tensorflow 2
 python -m pip install -U tensorflow-gpu
+
+# update symbol link
+rm /usr/local/cuda
+ln -s /usr/local/cuda-10.0 /usr/local/cuda
